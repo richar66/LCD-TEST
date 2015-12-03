@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Dec 02 21:37:54 2015
+Analysis & Synthesis Status : Successful - Wed Dec 02 22:41:24 2015
 Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Web Edition
 Revision Name : lcdlab1
 Top-level Entity Name : lcdlab1
 Family : Cyclone IV E
-Total logic elements : 121
-    Total combinational functions : 120
-    Dedicated logic registers : 72
-Total registers : 72
-Total pins : 13
+Total logic elements : 222
+    Total combinational functions : 211
+    Dedicated logic registers : 92
+Total registers : 92
+Total pins : 27
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

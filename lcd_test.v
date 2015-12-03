@@ -1,15 +1,16 @@
 module	LCD_TEST (
 //Q FSM
 input [9:0] answer,
-input submit, clk, rst,
-output reg redOut, greenOut,
+input submit, rst,
+
 
 //output reg [6:0] Question;
 // Host Side
   input iCLK,iRST_N,
 // LCD Side
   output [7:0] 	LCD_DATA,
-  output LCD_RW,LCD_EN,LCD_RS	
+  output LCD_RW,LCD_EN,LCD_RS,
+  output reg redOut, greenOut 
 );
 //	Internal Wires/Registers
 reg	[5:0]	LUT_INDEX;
@@ -21,9 +22,11 @@ reg	[7:0]	mLCD_DATA;
 reg		mLCD_RS;
 wire		mLCD_Done;
 reg [7:0] Question;
+ //reg redOut, greenOut;
 
-//reg redOut, greenOut;
-reg [2:0] S, NS;
+
+reg [6:0] NS;
+reg [6:0] S; 
 reg [9:0] Answer;
 
 parameter
@@ -66,7 +69,7 @@ parameter	LCD_CH_LINE	=	LCD_LINE1+16;
 parameter	LCD_LINE2	=	LCD_LINE1+16+1;
 parameter	LUT_SIZE	=	LCD_LINE1+32+1;
 
-always @ (posedge clk or negedge rst)
+always @ (posedge iCLK or negedge rst)
 begin
 	if (rst == 1'b0)
 	begin
@@ -194,7 +197,7 @@ begin
 	end
 	endcase
 end	
-always @ (posedge clk or negedge rst)
+always @ (posedge iCLK or negedge rst)
 begin
 	if(rst == 1'b0)
 	begin

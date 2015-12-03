@@ -114,4 +114,22 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name CDF_FILE output_files/Chain.cdf
 set_global_assignment -name CDF_FILE /output_files/Chain1.cdf
 set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity twoQfsm -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity twoQfsm -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity twoQfsm -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity twoQfsm -section_id Top
+set_location_assignment PIN_AB28 -to Answer[0]
+set_location_assignment PIN_AC28 -to Answer[1]
+set_location_assignment PIN_AC27 -to Answer[2]
+set_location_assignment PIN_G21 -to greenout
+set_location_assignment PIN_G19 -to redout
+set_location_assignment PIN_Y23 -to Reset
+set_location_assignment PIN_Y24 -to Submit
+set_location_assignment PIN_AB27 -to Answer[4]
+set_location_assignment PIN_AC26 -to Answer[5]
+set_location_assignment PIN_AD26 -to Answer[6]
+set_location_assignment PIN_AB26 -to Answer[7]
+set_location_assignment PIN_AC25 -to Answer[8]
+set_location_assignment PIN_AB25 -to Answer[9]
+set_location_assignment PIN_AD27 -to Answer[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

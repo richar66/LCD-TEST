@@ -1,5 +1,5 @@
 EDA Netlist Writer report for lcdlab1
-Wed Dec 02 21:39:42 2015
+Wed Dec 02 22:43:16 2015
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Dec 02 21:39:42 2015 ;
+; EDA Netlist Writer Status ; Successful - Wed Dec 02 22:43:16 2015 ;
 ; Revision Name             ; lcdlab1                               ;
 ; Top-level Entity Name     ; lcdlab1                               ;
 ; Family                    ; Cyclone IV E                          ;
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Wed Dec 02 21:39:39 2015
+    Info: Processing started: Wed Dec 02 22:43:12 2015
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off lcdlab1 -c lcdlab1
 Info (204019): Generated file lcdlab1_7_1200mv_85c_slow.vo in folder "D:/LCD TEST/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file lcdlab1_7_1200mv_0c_slow.vo in folder "D:/LCD TEST/simulation/modelsim/" for EDA simulation tool
@@ -100,8 +100,8 @@ Info (204019): Generated file lcdlab1_7_1200mv_0c_v_slow.sdo in folder "D:/LCD T
 Info (204019): Generated file lcdlab1_min_1200mv_0c_v_fast.sdo in folder "D:/LCD TEST/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file lcdlab1_v.sdo in folder "D:/LCD TEST/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 481 megabytes
-    Info: Processing ended: Wed Dec 02 21:39:43 2015
+    Info: Peak virtual memory: 472 megabytes
+    Info: Processing ended: Wed Dec 02 22:43:16 2015
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 

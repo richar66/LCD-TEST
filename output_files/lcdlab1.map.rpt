@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lcdlab1
-Wed Dec 02 21:37:54 2015
+Wed Dec 02 22:41:24 2015
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -17,16 +17,14 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
   9. State Machine - |lcdlab1|LCD_TEST:u1|S
  10. State Machine - |lcdlab1|LCD_TEST:u1|LCD_Controller:u0|ST
  11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: LCD_TEST:u1
- 16. Parameter Settings for User Entity Instance: LCD_TEST:u1|LCD_Controller:u0
- 17. Port Connectivity Checks: "LCD_TEST:u1"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: LCD_TEST:u1
+ 15. Parameter Settings for User Entity Instance: LCD_TEST:u1|LCD_Controller:u0
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -53,16 +51,16 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 02 21:37:54 2015      ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 02 22:41:24 2015      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; lcdlab1                                    ;
 ; Top-level Entity Name              ; lcdlab1                                    ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 121                                        ;
-;     Total combinational functions  ; 120                                        ;
-;     Dedicated logic registers      ; 72                                         ;
-; Total registers                    ; 72                                         ;
-; Total pins                         ; 13                                         ;
+; Total logic elements               ; 222                                        ;
+;     Total combinational functions  ; 211                                        ;
+;     Dedicated logic registers      ; 92                                         ;
+; Total registers                    ; 92                                         ;
+; Total pins                         ; 27                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -185,28 +183,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 121            ;
+; Estimated Total logic elements              ; 222            ;
 ;                                             ;                ;
-; Total combinational functions               ; 120            ;
+; Total combinational functions               ; 211            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 50             ;
-;     -- 3 input functions                    ; 15             ;
-;     -- <=2 input functions                  ; 55             ;
+;     -- 4 input functions                    ; 123            ;
+;     -- 3 input functions                    ; 20             ;
+;     -- <=2 input functions                  ; 68             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 77             ;
+;     -- normal mode                          ; 168            ;
 ;     -- arithmetic mode                      ; 43             ;
 ;                                             ;                ;
-; Total registers                             ; 72             ;
-;     -- Dedicated logic registers            ; 72             ;
+; Total registers                             ; 92             ;
+;     -- Dedicated logic registers            ; 92             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 13             ;
+; I/O pins                                    ; 27             ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 72             ;
-; Total fan-out                               ; 658            ;
-; Average fan-out                             ; 2.91           ;
+; Maximum fan-out                             ; 92             ;
+; Total fan-out                               ; 1066           ;
+; Average fan-out                             ; 2.92           ;
 +---------------------------------------------+----------------+
 
 
@@ -215,8 +213,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; |lcdlab1                   ; 120 (0)           ; 72 (0)       ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |lcdlab1                               ; work         ;
-;    |LCD_TEST:u1|           ; 93 (72)           ; 51 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lcdlab1|LCD_TEST:u1                   ; work         ;
+; |lcdlab1                   ; 211 (0)           ; 92 (0)       ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |lcdlab1                               ; work         ;
+;    |LCD_TEST:u1|           ; 184 (163)         ; 71 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lcdlab1|LCD_TEST:u1                   ; work         ;
 ;       |LCD_Controller:u0|  ; 21 (21)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lcdlab1|LCD_TEST:u1|LCD_Controller:u0 ; work         ;
 ;    |Reset_Delay:r0|        ; 27 (27)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lcdlab1|Reset_Delay:r0                ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
@@ -239,18 +237,18 @@ Encoding Type:  One-Hot
 Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------+
 ; State Machine - |lcdlab1|LCD_TEST:u1|S                                                         ;
-+------------+------------+----------+----------+------+------------+----------+----------+------+
-; Name       ; S.correct1 ; S.wrong1 ; S.check1 ; S.Q1 ; S.correct0 ; S.wrong0 ; S.check0 ; S.Q0 ;
-+------------+------------+----------+----------+------+------------+----------+----------+------+
-; S.Q0       ; 0          ; 0        ; 0        ; 0    ; 0          ; 0        ; 0        ; 0    ;
-; S.check0   ; 0          ; 0        ; 0        ; 0    ; 0          ; 0        ; 1        ; 1    ;
-; S.wrong0   ; 0          ; 0        ; 0        ; 0    ; 0          ; 1        ; 0        ; 1    ;
-; S.correct0 ; 0          ; 0        ; 0        ; 0    ; 1          ; 0        ; 0        ; 1    ;
-; S.Q1       ; 0          ; 0        ; 0        ; 1    ; 0          ; 0        ; 0        ; 1    ;
-; S.check1   ; 0          ; 0        ; 1        ; 0    ; 0          ; 0        ; 0        ; 1    ;
-; S.wrong1   ; 0          ; 1        ; 0        ; 0    ; 0          ; 0        ; 0        ; 1    ;
-; S.correct1 ; 1          ; 0        ; 0        ; 0    ; 0          ; 0        ; 0        ; 1    ;
-+------------+------------+----------+----------+------+------------+----------+----------+------+
++------------+----------+----------+------+------------+----------+----------+------+------------+
+; Name       ; S.wrong1 ; S.check1 ; S.Q1 ; S.correct0 ; S.wrong0 ; S.check0 ; S.Q0 ; S.correct1 ;
++------------+----------+----------+------+------------+----------+----------+------+------------+
+; S.Q0       ; 0        ; 0        ; 0    ; 0          ; 0        ; 0        ; 0    ; 0          ;
+; S.check0   ; 0        ; 0        ; 0    ; 0          ; 0        ; 1        ; 1    ; 0          ;
+; S.wrong0   ; 0        ; 0        ; 0    ; 0          ; 1        ; 0        ; 1    ; 0          ;
+; S.correct0 ; 0        ; 0        ; 0    ; 1          ; 0        ; 0        ; 1    ; 0          ;
+; S.Q1       ; 0        ; 0        ; 1    ; 0          ; 0        ; 0        ; 1    ; 0          ;
+; S.check1   ; 0        ; 1        ; 0    ; 0          ; 0        ; 0        ; 1    ; 0          ;
+; S.wrong1   ; 1        ; 0        ; 0    ; 0          ; 0        ; 0        ; 1    ; 0          ;
+; S.correct1 ; 0        ; 0        ; 0    ; 0          ; 0        ; 0        ; 1    ; 1          ;
++------------+----------+----------+------+------------+----------+----------+------+------------+
 
 
 Encoding Type:  One-Hot
@@ -266,43 +264,27 @@ Encoding Type:  One-Hot
 +-------+-------+-------+-------+---------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                            ;
-+----------------------------------------+--------------------------------------+
-; Register name                          ; Reason for Removal                   ;
-+----------------------------------------+--------------------------------------+
-; LCD_TEST:u1|Answer[0..9]               ; Stuck at GND due to stuck port clock ;
-; LCD_TEST:u1|mLCD_ST~8                  ; Lost fanout                          ;
-; LCD_TEST:u1|mLCD_ST~9                  ; Lost fanout                          ;
-; LCD_TEST:u1|mLCD_ST~10                 ; Lost fanout                          ;
-; LCD_TEST:u1|mLCD_ST~11                 ; Lost fanout                          ;
-; LCD_TEST:u1|mLCD_ST~12                 ; Lost fanout                          ;
-; LCD_TEST:u1|mLCD_ST~13                 ; Lost fanout                          ;
-; LCD_TEST:u1|S~4                        ; Lost fanout                          ;
-; LCD_TEST:u1|S~5                        ; Lost fanout                          ;
-; LCD_TEST:u1|S~6                        ; Lost fanout                          ;
-; LCD_TEST:u1|S.Q0                       ; Stuck at GND due to stuck port clear ;
-; LCD_TEST:u1|S.check0                   ; Stuck at GND due to stuck port clear ;
-; LCD_TEST:u1|S.wrong0                   ; Stuck at GND due to stuck port clear ;
-; LCD_TEST:u1|S.correct0                 ; Stuck at GND due to stuck port clear ;
-; LCD_TEST:u1|S.Q1                       ; Stuck at GND due to stuck port clear ;
-; LCD_TEST:u1|S.check1                   ; Stuck at GND due to stuck port clear ;
-; LCD_TEST:u1|S.wrong1                   ; Stuck at GND due to stuck port clear ;
-; LCD_TEST:u1|S.correct1                 ; Stuck at GND due to stuck port clear ;
-; LCD_TEST:u1|LCD_Controller:u0|ST~8     ; Lost fanout                          ;
-; LCD_TEST:u1|LCD_Controller:u0|ST~9     ; Lost fanout                          ;
-; Total Number of Removed Registers = 29 ;                                      ;
-+----------------------------------------+--------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                             ;
-+----------------------+-------------------------+----------------------------------------+
-; Register name        ; Reason for Removal      ; Registers Removed due to This Register ;
-+----------------------+-------------------------+----------------------------------------+
-; LCD_TEST:u1|S.check0 ; Stuck at GND            ; LCD_TEST:u1|S.Q1                       ;
-;                      ; due to stuck port clear ;                                        ;
-+----------------------+-------------------------+----------------------------------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; LCD_TEST:u1|mLCD_ST~8                  ; Lost fanout        ;
+; LCD_TEST:u1|mLCD_ST~9                  ; Lost fanout        ;
+; LCD_TEST:u1|mLCD_ST~10                 ; Lost fanout        ;
+; LCD_TEST:u1|mLCD_ST~11                 ; Lost fanout        ;
+; LCD_TEST:u1|mLCD_ST~12                 ; Lost fanout        ;
+; LCD_TEST:u1|mLCD_ST~13                 ; Lost fanout        ;
+; LCD_TEST:u1|S~4                        ; Lost fanout        ;
+; LCD_TEST:u1|S~5                        ; Lost fanout        ;
+; LCD_TEST:u1|S~6                        ; Lost fanout        ;
+; LCD_TEST:u1|S~8                        ; Lost fanout        ;
+; LCD_TEST:u1|S~9                        ; Lost fanout        ;
+; LCD_TEST:u1|S~10                       ; Lost fanout        ;
+; LCD_TEST:u1|LCD_Controller:u0|ST~8     ; Lost fanout        ;
+; LCD_TEST:u1|LCD_Controller:u0|ST~9     ; Lost fanout        ;
+; Total Number of Removed Registers = 14 ;                    ;
++----------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -310,12 +292,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 72    ;
-; Number of registers using Synchronous Clear  ; 19    ;
+; Total registers                              ; 92    ;
+; Number of registers using Synchronous Clear  ; 18    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 51    ;
+; Number of registers using Asynchronous Clear ; 61    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Clock Enable       ; 74    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -332,23 +314,23 @@ Encoding Type:  One-Hot
 
 +----------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: LCD_TEST:u1 ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; Q0             ; 000   ; Unsigned Binary                 ;
-; check0         ; 001   ; Unsigned Binary                 ;
-; wrong0         ; 010   ; Unsigned Binary                 ;
-; correct0       ; 011   ; Unsigned Binary                 ;
-; Q1             ; 100   ; Unsigned Binary                 ;
-; check1         ; 101   ; Unsigned Binary                 ;
-; wrong1         ; 110   ; Unsigned Binary                 ;
-; correct1       ; 111   ; Unsigned Binary                 ;
-; LCD_INTIAL     ; 0     ; Signed Integer                  ;
-; LCD_LINE1      ; 5     ; Signed Integer                  ;
-; LCD_CH_LINE    ; 21    ; Signed Integer                  ;
-; LCD_LINE2      ; 22    ; Signed Integer                  ;
-; LUT_SIZE       ; 38    ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
++----------------+---------+-------------------------------+
+; Parameter Name ; Value   ; Type                          ;
++----------------+---------+-------------------------------+
+; Q0             ; 0000001 ; Unsigned Binary               ;
+; check0         ; 0000010 ; Unsigned Binary               ;
+; wrong0         ; 0000011 ; Unsigned Binary               ;
+; correct0       ; 0000100 ; Unsigned Binary               ;
+; Q1             ; 0000101 ; Unsigned Binary               ;
+; check1         ; 0000110 ; Unsigned Binary               ;
+; wrong1         ; 0000111 ; Unsigned Binary               ;
+; correct1       ; 0001000 ; Unsigned Binary               ;
+; LCD_INTIAL     ; 0       ; Signed Integer                ;
+; LCD_LINE1      ; 5       ; Signed Integer                ;
+; LCD_CH_LINE    ; 21      ; Signed Integer                ;
+; LCD_LINE2      ; 22      ; Signed Integer                ;
+; LUT_SIZE       ; 38      ; Signed Integer                ;
++----------------+---------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -362,46 +344,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LCD_TEST:u1"                                                                                                                                     ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                      ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; answer   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; submit   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; clk      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; rst      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; redOut   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-; greenOut ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 72                          ;
-;     CLR               ; 6                           ;
-;     ENA               ; 19                          ;
-;     ENA CLR           ; 26                          ;
-;     ENA CLR SCLR      ; 19                          ;
+; boundary_port         ; 27                          ;
+; cycloneiii_ff         ; 92                          ;
+;     CLR               ; 16                          ;
+;     ENA               ; 29                          ;
+;     ENA CLR           ; 27                          ;
+;     ENA CLR SCLR      ; 18                          ;
 ;     plain             ; 2                           ;
 ; cycloneiii_io_obuf    ; 8                           ;
-; cycloneiii_lcell_comb ; 122                         ;
+; cycloneiii_lcell_comb ; 213                         ;
 ;     arith             ; 43                          ;
 ;         2 data inputs ; 41                          ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 79                          ;
+;     normal            ; 170                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 50                          ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 123                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.46                        ;
+; Average LUT depth     ; 2.86                        ;
 +-----------------------+-----------------------------+
 
 
@@ -410,7 +378,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -420,7 +388,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Wed Dec 02 21:37:44 2015
+    Info: Processing started: Wed Dec 02 22:41:17 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcdlab1 -c lcdlab1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file reset_delay.v
@@ -434,10 +402,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file lcd_con
 Info (12127): Elaborating entity "lcdlab1" for the top level hierarchy
 Info (12128): Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:r0"
 Info (12128): Elaborating entity "LCD_TEST" for hierarchy "LCD_TEST:u1"
-Warning (10036): Verilog HDL or VHDL warning at lcd_test.v(23): object "Question" assigned a value but never read
-Info (10264): Verilog HDL Case Statement information at lcd_test.v(184): all case item expressions in this case statement are onehot
+Warning (10036): Verilog HDL or VHDL warning at lcd_test.v(24): object "Question" assigned a value but never read
+Info (10264): Verilog HDL Case Statement information at lcd_test.v(210): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "LCD_Controller" for hierarchy "LCD_TEST:u1|LCD_Controller:u0"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[0]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[1]" and its non-tri-state driver.
@@ -460,20 +427,45 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LCD_ON" is stuck at VCC
     Warning (13410): Pin "LCD_RW" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored assignments for entity "twoQfsm" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity twoQfsm -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity twoQfsm -section_id Top was ignored
 Info (144001): Generated suppressed messages file D:/LCD TEST/output_files/lcdlab1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 135 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 4 output pins
+Info (21057): Implemented 250 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 6 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 122 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info (21061): Implemented 223 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 48 warnings
     Info: Peak virtual memory: 562 megabytes
-    Info: Processing ended: Wed Dec 02 21:37:54 2015
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Wed Dec 02 22:41:25 2015
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+
